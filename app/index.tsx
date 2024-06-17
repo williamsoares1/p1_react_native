@@ -1,5 +1,5 @@
 import styles from "./styles";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import { Feather } from '@expo/vector-icons';
 
 import imageLogin from '../src/assets/images/imageLoginSemFundo.png';
@@ -12,7 +12,7 @@ import { LastText } from "@/components/LastText/LastText";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <ImageBox source={imageLogin}/>
       <View style={styles.loginBox}>
         <Text style={styles.infoPageText}>Log In</Text>
@@ -29,6 +29,6 @@ export default function Index() {
       <Text style={styles.orText}>Or</Text>
       <IconsContainer/>
       <LastText content="Don't have an account?" contentRedirect="Sign Up"/>
-    </View>
+    </ScrollView>
   );
 }
